@@ -2,7 +2,7 @@
 
 This repository contains a Python-based study of congestion knee detection in latency-vs-throughput curves. It was built as part of a broader learning experience while working around a network optimization product, with the goal of understanding how speed-limiting decisions might be reasoned about from router telemetry.
 
-At a high level, the project explores a simple but important idea from TCP acceleration and network optimization: increasing available bandwidth or sending speed is not always beneficial. If traffic is pushed too aggressively, latency can rise sharply, queues can build, and the practical user experience can degrade even if raw throughput looks higher. The "knee" in a latency-vs-speed curve is the region where those tradeoffs begin to turn unfavourable.
+At a high level, the project explores a simple but important idea from TCP acceleration and network optimization: increasing sending speed is not always beneficial. If traffic is pushed too aggressively, latency can rise sharply, queues can build, and the practical user experience can degrade even if raw throughput looks higher. The "knee" in a latency-vs-speed curve is the region where those tradeoffs begin to turn unfavourable.
 
 ## Project Context
 
@@ -165,8 +165,6 @@ This setup was useful for learning several things at once:
 - how threshold choices influence the behaviour of heuristic detectors
 - how a statistical smoother such as Gaussian Process Regression can help reveal structure in noisy data
 - how to compare algorithm outputs critically rather than accepting the first plausible result
-
-It also clarified an important modeling point: this problem is not automatically a machine learning classification problem. A large part of the challenge lies in signal interpretation, threshold selection, and control logic.
 
 ## Running The Project
 
